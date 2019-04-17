@@ -1,19 +1,17 @@
 import * as vscode from "vscode";
 
-import { GameView } from "../GameView";
-
-import html from "@Games/Dino/game.html";
+import { GameView } from "@/GameView";
 import Utils from "@/Utils";
+
+import html from "./game.html";
 
 const GameName: string = "Dino";
 
 export default class Dino {
     public static start(context: vscode.ExtensionContext) {
         const scriptPath = Utils.getGameAssetPath(context, GameName, "game.js");
-        const stylePath = Utils.getGameAssetPath(context, GameName, "game.css");
 
-        let resolvedHtml = html.replace("${scriptPath}", scriptPath);
-        resolvedHtml = resolvedHtml.replace("${stylePath}", stylePath);
+        const resolvedHtml = html.replace("${scriptPath}", scriptPath);
         const view = new GameView(resolvedHtml, {
             title: GameName
         });

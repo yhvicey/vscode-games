@@ -3,9 +3,11 @@
 tsconfig.json
 webpack.config.js
 *.log
+*.vsix
 
 # Folders
 .vscode
+assets
 node_modules
 src/**
 tslint.json

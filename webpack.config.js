@@ -20,8 +20,7 @@ const config = {
     resolve: {
         extensions: ['.ts', '.js'],
         alias: {
-            "@": path.resolve(__dirname, "src"),
-            "@Games": path.resolve(__dirname, "Games")
+            "@": path.resolve(__dirname, "src")
         }
     },
     module: {
