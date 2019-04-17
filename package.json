@@ -1,0 +1,52 @@
+{
+    "name": "vscode-games",
+    "displayName": "Games",
+    "publisher": "yiwwan",
+    "description": "Tiny games for break time!",
+    "version": "0.0.2",
+    "license": "0BSD",
+    "repository": "https://github.com/yhvicey/vscode-games",
+    "keywords": [
+        "game",
+        "games",
+        "relax",
+        "fun",
+        "dino"
+    ],
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:games.startDino"
+    ],
+    "main": "./dist/extension",
+    "contributes": {
+        "commands": [{
+            "command": "games.startDino",
+            "title": "Start Dino (Chrome Easter Egg)",
+            "category": "Games"
+        }]
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "webpack --mode development",
+        "watch": "webpack --mode development --watch",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "@types/node": "^10.12.21",
+        "css-loader": "^2.1.1",
+        "html-loader": "^0.5.5",
+        "ts-loader": "^5.3.3",
+        "tslint": "^5.12.1",
+        "typescript": "^3.3.1",
+        "url-loader": "^1.1.2",
+        "vsce": "^1.59.0",
+        "vscode": "^1.1.28",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.0"
+    }
+}

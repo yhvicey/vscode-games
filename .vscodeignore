@@ -1,0 +1,11 @@
+# Files
+.gitignore
+tsconfig.json
+webpack.config.js
+*.log
+
+# Folders
+.vscode
+node_modules
+src/**
+tslint.json
