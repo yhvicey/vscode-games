@@ -10,6 +10,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'extension.js',
+        chunkFilename: "[name].js",
         libraryTarget: "commonjs2",
         devtoolModuleFilenameTemplate: "../[resource-path]",
     },
@@ -31,7 +32,7 @@ const config = {
                 loader: 'ts-loader',
                 options: {
                     compilerOptions: {
-                        "module": "es6"
+                        "module": "esNext"
                     }
                 }
             }]
@@ -39,12 +40,25 @@ const config = {
             test: /\.html$/,
             exclude: /node_modules/,
             use: [{
-                loader: 'html-loader'
+                loader: 'html-loader',
+                options: {
+                    attrs: [
+                        "link:href",
+                        "script:src",
+                        "img:src"
+                    ]
+                }
+            }]
+        }, {
+            test: /\.css$/,
+            exclude: /node_modules/,
+            use: [{
+                loader: 'css-loader'
             }]
         }, {
             test: /\.(png|jpg)$/,
             loader: 'url-loader?limit=8192'
-        }, ]
+        }]
     }
 }
 

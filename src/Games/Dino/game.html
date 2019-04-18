@@ -7,7 +7,7 @@
     <title>chrome easter egg: t-rex runner</title>
     <link rel="stylesheet" href="./game.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="${scriptPath}"></script>
+    <script src="./game.js"></script>
 </head>
 
 <body id="t" class="offline">
@@ -35,6 +35,7 @@
 </body>
 
 <script>
+    document.addEventListener('DOMContentLoaded', onDocumentLoad);
     document.onkeydown = function (evt) {
         evt = evt || window.event;
         if (evt.keyCode == 32) {

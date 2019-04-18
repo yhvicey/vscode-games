@@ -12,9 +12,4 @@ export default class Utils {
         const diskPath = this.getDiskPath(context, relativePath);
         return diskPath.with({ scheme: "vscode-resource" }).toString();
     }
-
-    public static getGameAssetPath(context: vscode.ExtensionContext, game: string, relativePath: string) {
-        const diskPath = this.getDiskPath(context, "Games", game, relativePath);
-        return diskPath.with({ scheme: "vscode-resource" }).toString();
-    }
 }
