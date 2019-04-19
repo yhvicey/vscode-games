@@ -1,10 +1,10 @@
 import * as vscode from "vscode";
+import Dino from "@/Games/Dino";
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(
         vscode.commands.registerCommand("games.startDino", async () => {
-            const DinoChunk = await import(/* webpackChunkName: "Dino" */ "./Games/Dino");
-            DinoChunk.default.start(context);
+            Dino.start(context);
         })
     );
 }
