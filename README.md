@@ -8,7 +8,7 @@ Usage: Press `F1`, type `Games:`, then choose the game you want to play!
 
 Name | Description | Note
 --- | --- | ---
-Dino | Chrome easter egg | From [wayou/t-rex-runner](https://github/wayou/t-rex-runner)
+Dino | Chrome easter egg | From [wayou/t-rex-runner](https://github.com/wayou/t-rex-runner)
 
 ## Adding new game
 
